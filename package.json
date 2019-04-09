@@ -24,8 +24,10 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "font-awesome": "^4.7.0",
         "laravel-echo": "^1.5.3",
         "pusher-js": "^4.4.0",
+        "typed.js": "^2.0.10",
         "vue-axios": "^2.1.4"
     }
 }

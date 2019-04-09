@@ -5,6 +5,15 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class Attachment extends Model {
-	public function lessons() {
-		return $this->belongsTo("App\Roles");
-	}}
+  /**
+   * @var array
+   */
+  protected $fillable = ['filename'];
+
+  /**
+   * @return mixed
+   */
+  public function lessons() {
+    return $this->belongsTo("App\Lesson");
+  }
+}

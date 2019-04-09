@@ -1,23 +1,23 @@
 <?php
 
-use App\Setting;
+use App\Role;
 use Illuminate\Database\Seeder;
 
-class SettingsTableSeeder extends Seeder {
+class RolesTableSeeder extends Seeder {
   /**
    * Run the database seeds.
    *
    * @return void
    */
   public function run() {
-    Setting::truncate();
-
     $data = [
-      ['key' => 'title', 'value' => 'Learning Management System']
+      ['name' => 'admin'],
+      ['name' => 'instructor'],
+      ['name' => 'student']
     ];
 
     foreach ($data as $row) {
-      Setting::create($row);
+      Role::updateOrCreate($row);
     }
   }
 }

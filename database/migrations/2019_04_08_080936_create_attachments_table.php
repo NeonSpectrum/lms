@@ -5,27 +5,27 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 class CreateAttachmentsTable extends Migration {
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up() {
-		Schema::create('attachments', function (Blueprint $table) {
-			$table->increments('id');
-			$table->unsignedInteger('lesson_id');
-			$table->foreign('lesson_id')->references('id')->on('lessons');
-			$table->text('filename');
-			$table->timestamps();
-		});
-	}
+  /**
+   * Run the migrations.
+   *
+   * @return void
+   */
+  public function up() {
+    Schema::create('attachments', function (Blueprint $table) {
+      $table->increments('id');
+      $table->unsignedInteger('lesson_id');
+      $table->foreign('lesson_id')->references('id')->on('lessons');
+      $table->string('filename');
+      $table->timestamps();
+    });
+  }
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down() {
-		Schema::dropIfExists('attachments');
-	}
+  /**
+   * Reverse the migrations.
+   *
+   * @return void
+   */
+  public function down() {
+    Schema::dropIfExists('attachments');
+  }
 }

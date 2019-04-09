@@ -5,11 +5,17 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class Lesson extends Model {
-	protected $fillable = [
-		'title', 'description',
-	];
-	public function attachments() {
-		return $this->hasMany("App\Attachment");
-	}
+  /**
+   * @var array
+   */
+  protected $fillable = [
+    'title', 'description'
+  ];
+  /**
+   * @return mixed
+   */
+  public function attachments() {
+    return $this->hasMany("App\Attachment");
+  }
 
 }

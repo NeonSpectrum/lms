@@ -5,10 +5,16 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class Subject extends Model {
-	protected $fillable = [
-		'name',
-	];
-	public function sections() {
-		return $this->belongsToMany("App\Section");
-	}
+  /**
+   * @var array
+   */
+  protected $fillable = [
+    'name'
+  ];
+  /**
+   * @return mixed
+   */
+  public function sections() {
+    return $this->hasMany("App\Section");
+  }
 }

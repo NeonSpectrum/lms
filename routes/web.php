@@ -11,6 +11,16 @@
 |
  */
 
-Route::get('/', function () {
-  return view('index');
+Route::get('login', function () {
+  return view('login');
+})->name('login')->middleware('guest');
+
+Route::get('logout', 'AuthController@logout');
+
+Route::post('login', 'AuthController@login');
+
+Route::middleware('auth')->group(function () {
+  Route::get('/', function () {
+    return view('index');
+  });
 });
