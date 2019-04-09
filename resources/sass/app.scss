@@ -137,6 +137,9 @@ div.content {
   background-color: #d79e23;
   border-radius: 50% !important;
   padding: 9px 16px !important;
+  -webkit-box-shadow: -6px 5px 67px 7px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: -6px 5px 67px 7px rgba(0, 0, 0, 0.62);
+  box-shadow: -6px 5px 67px 7px rgba(0, 0, 0, 0.62);
 }
 .profile-button:hover {
   background-color: #ffae00 !important;
@@ -146,6 +149,15 @@ div.content {
   position: relative;
   color: white;
   // box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+  & .sidebar-image:after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    box-shadow: inset 0px -45px 35px -14px rgba(0, 0, 0, 0.75);
+  }
 }
 .bottom-left {
   position: absolute;

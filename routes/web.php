@@ -20,9 +20,16 @@ Route::get('navbar', function () {
 Route::get('logout', 'AuthController@logout');
 
 Route::post('login', 'AuthController@login');
+Route::get('dashboard', function () {
+	return view('dashboard');
+});
+Route::get('courses', function () {
+	return view('courses');
+});
+Route::get('students', function () {
+	return view('students');
+});
 
 Route::middleware('auth')->group(function () {
-	Route::get('/', function () {
-		return view('index');
-	});
+
 });
