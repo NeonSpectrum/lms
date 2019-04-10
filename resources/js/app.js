@@ -16,6 +16,23 @@ $('#btnTogglePassword').click(function() {
   }
 })
 
+window.displaySubject = () => {
+  var displayValue = $('.section').css('display')
+  $('.subject').each(function() {
+    $(this)
+      .closest('#subject')
+      .fadeToggle()
+  })
+
+  // $('#subject').fadeToggle()
+  if (displayValue != 'none') {
+    $('#section').fadeToggle()
+    // alert('is this woorkiing')
+  }
+}
+window.displaySections = () => {
+  $('#section').fadeToggle()
+}
 $('form[name=frmLogin]').submit(function(e) {
   e.preventDefault()
 

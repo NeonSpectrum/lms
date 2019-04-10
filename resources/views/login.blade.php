@@ -1,3 +1,4 @@
+@php($login = true)
 @extends("layout")
 
 @section("body")

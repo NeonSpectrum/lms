@@ -20,12 +20,24 @@ Route::get('navbar', function () {
 Route::get('logout', 'AuthController@logout');
 
 Route::post('login', 'AuthController@login');
-Route::get('dashboard', function () {
-	return view('dashboard');
+
+Route::prefix('courses')->group(function () {
+	Route::get('/', function () {
+		return view('courses.index');
+	});
+	Route::get('sections', function () {
+		return view('courses.sections');
+	});
+	Route::get('lessons', function () {
+		return view('courses.lessons');
+	});
+	Route::get('files', function () {
+		return view('courses.files');
+	});
 });
-Route::get('courses', function () {
-	return view('courses');
-});
+// Route::get('courses', function () {
+// 	return view('courses');
+// });
 Route::get('students', function () {
 	return view('students');
 });
