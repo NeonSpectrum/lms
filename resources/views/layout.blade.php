@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="{{ mix("css/app.css") }}">
 </head>
 <body>
-  <div style="display: flex;height:100%;">
+  <div class="layout-nav">
   @include("navbar")
-<div style='flex:1'>
+<div class="layout-content">
   @yield("body")
 </div>
 </div>

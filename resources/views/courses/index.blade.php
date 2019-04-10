@@ -2,9 +2,8 @@
 
 @section("body")
 <div  class="main">
-  <h5>Main: Courses</h5>
+  <div class="shadow" style="padding: 15px 0px 15px 0px;"><h5>Main: Courses</h5></div>
   <div>
-  <hr  >
   <br>
   <div class="main-content">
     <h2 style="font-weight: bold;">Courses</h2 >

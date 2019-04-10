@@ -9,7 +9,7 @@
   <div class="main-content">
     <h2 style="font-weight: bold;">Mathematics: Lessons</h2 >
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-    <input type="text" class="form-control" placeholder="Search Courses...">
+    <input type="text" class="form-control" placeholder="Search Lessons...">
 
 
     <br><br>

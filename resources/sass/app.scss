@@ -10,6 +10,9 @@ body,
   font-family: 'Noto Sans';
   height: 100%;
 }
+body {
+  overflow: hidden;
+}
 
 .notosans {
   font-family: 'Fjalla One';
@@ -75,8 +78,8 @@ body,
   width: 200px;
   background-color: #ffae00;
   display: inline-block;
-  height: 100%;
   overflow: auto;
+  height: 100%;
 }
 
 /* Sidebar links */
@@ -106,7 +109,17 @@ div.content {
   padding: 1px 16px;
   height: 1000px;
 }
-
+nav {
+  display: none !important;
+}
+.layout-nav {
+  display: flex;
+  height: 100%;
+}
+.layout-content {
+  flex: 1;
+  overflow: auto;
+}
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
   // .sidebar {
@@ -123,6 +136,20 @@ div.content {
   .sidebar {
     display: none;
   }
+  nav {
+    display: block !important;
+  }
+  .layout-nav {
+    display: block !important;
+    height: auto !important;
+  }
+  .layout-content {
+    flex: none;
+  }
+  .action-buttons,
+  .btn-link {
+    padding-left: 0px !important;
+  }
 }
 
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
@@ -131,6 +158,16 @@ div.content {
     // text-align: center;
     // float: none;
     display: none;
+  }
+  nav {
+    display: block !important;
+  }
+  .layout-nav {
+    display: block !important;
+    height: auto !important;
+  }
+  .layout-content {
+    flex: none;
   }
 }
 .profile-button {
@@ -210,6 +247,9 @@ thead {
   padding: 0px 10px;
   font-weight: bold;
   font-size: 13px;
+}
+.table {
+  margin-bottom: 0px !important;
 }
 .subject,
 .section {

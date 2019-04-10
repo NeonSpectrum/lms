@@ -2,14 +2,13 @@
 
 @section("body")
 <div  class="main">
-  <h5>Main: Courses / Mathematics</h5>
+   <div class="shadow" style="padding: 15px 0px 15px 0px;"> <h5>Main: Courses / Mathematics</h5></div>
   <div>
-  <hr  >
   <br>
   <div class="main-content">
     <h2 style="font-weight: bold;">Mathematics</h2 >
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-    <input type="text" class="form-control" placeholder="Search Courses...">
+    <input type="text" class="form-control" placeholder="Search Sections...">
 
 
     <br><br>

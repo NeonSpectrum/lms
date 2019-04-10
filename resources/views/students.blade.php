@@ -9,7 +9,7 @@
   <div class="main-content">
     <h2 style="font-weight: bold;">Students</h2 >
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-    <input type="text" class="form-control" placeholder="Search Courses...">
+    <input type="text" class="form-control" placeholder="Search Students...">
 
 
     <br><br>
@@ -29,16 +29,17 @@
         <td><a href="#"class="action-buttons"><i class="fa fa-eye"></i></a><button onClick="displaySubject()" class="action-buttons btn btn-link"><i class="fa fa-chevron-down"></i></button></td>
 
       </tr>
-      <tr id="subject" class="subject">
-        <td colspan="2">
-          <input  type="checkbox" value="" > Mathematics <button onClick="displaySections()" class="action-buttons btn btn-link"><i class="fa fa-chevron-down"></i></button>
+      <tr id="subject" class="subject" onClick="displaySections(event)">
+        <td colspan="2" >
+           <input  type="checkbox" value="" > Mathematics
+          <button  class="action-buttons btn btn-link"><i class="fa fa-chevron-down"></i></button>
         </td>
       </tr>
       <tr id="section" class="section">
         <td colspan="2" style="padding-left:30px">
-          <input  type="checkbox" value="" > Mathematics<br>
-          <input  type="checkbox" value="" > Saturn<br>
-          <input  type="checkbox" value="" > Uranus<br>
+          <input type="checkbox" value="" > Mathematics<br>
+          <input type="checkbox" value="" > Saturn<br>
+          <input type="checkbox" value="" > Uranus<br>
         </td>
       </tr>
       <tr id="subject" class="subject">

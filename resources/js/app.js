@@ -17,21 +17,44 @@ $('#btnTogglePassword').click(function() {
 })
 
 window.displaySubject = () => {
-  var displayValue = $('.section').css('display')
-  $('.subject').each(function() {
-    $(this)
-      .closest('#subject')
-      .fadeToggle()
-  })
+  var isSectionOpen = $('.section').css('display')
+  var isSubjectOpen = $('.subject').css('display')
+
+  var icon = $(event.target).closest('i')
+
+  if (icon.hasClass('fa-chevron-down')) {
+    icon.addClass('fa-chevron-up').removeClass('fa-chevron-down')
+    $('.subject').each(function() {
+      $(this)
+        .closest('#subject')
+        .fadeToggle()
+    })
+  } else if (icon.hasClass('fa-chevron-up')) {
+    icon.addClass('fa-chevron-down').removeClass('fa-chevron-up')
+    $('.subject').each(function() {
+      $(this)
+        .closest('#subject')
+        .fadeToggle()
+    })
+  }
 
   // $('#subject').fadeToggle()
-  if (displayValue != 'none') {
+  if (isSectionOpen != 'none') {
     $('#section').fadeToggle()
+
     // alert('is this woorkiing')
   }
 }
-window.displaySections = () => {
-  $('#section').fadeToggle()
+window.displaySections = event => {
+  var icon = $(event.target).closest('i')
+
+  if (icon.hasClass('fa-chevron-down')) {
+    icon.addClass('fa-chevron-up').removeClass('fa-chevron-down')
+    $('#section').fadeToggle()
+  } else if (icon.hasClass('fa-chevron-up')) {
+    icon.addClass('fa-chevron-down').removeClass('fa-chevron-up')
+    $('#section').fadeToggle()
+  }
 }
 $('form[name=frmLogin]').submit(function(e) {
   e.preventDefault()

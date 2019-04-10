@@ -41,6 +41,9 @@ Route::prefix('courses')->group(function () {
 Route::get('students', function () {
 	return view('students');
 });
+Route::get('dashboard', function () {
+	return view('dashboard');
+});
 
 Route::middleware('auth')->group(function () {
 
