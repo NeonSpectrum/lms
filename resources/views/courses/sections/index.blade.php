@@ -2,8 +2,8 @@
 
 @section("body")
 <div  class="main">
-   <div class="shadow" style="padding: 15px 0px 15px 0px;"> <h5>Main: Courses / Mathematics</h5></div>
-  <div>
+     @include('breadcrumbs')
+<div>
   <br>
   <div class="main-content">
     <h2 style="font-weight: bold;">Mathematics</h2 >
@@ -25,7 +25,7 @@
     <tbody >
       <tr>
         <td>Earth</td>
-        <td><a href="{{url('courses/lessons')}}" class="action-buttons"><i class="fa fa-eye"></i></a><a href="{{url('students')}}" class="action-buttons"><i class="fa fa-users"></i></a></td>
+        <td><a href="{{url('courses/sections/lessons')}}" class="action-buttons"><i class="fa fa-eye"></i></a><a href="{{url('students')}}" class="action-buttons"><i class="fa fa-users"></i></a></td>
       </tr>
       <tr>
         <td>Saturn</td>

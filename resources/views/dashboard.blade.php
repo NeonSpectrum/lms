@@ -2,7 +2,7 @@
 
 @section("body")
 <div  class="main">
-  hello
+  <div style="margin:10%"><h1>Dashyboard</h1></div>
 </div>
 
 

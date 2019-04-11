@@ -2,9 +2,8 @@
 
 @section("body")
 <div  class="main">
-  <h5>Main: Courses / Mathematics / Lessons</h5>
-  <div>
-  <hr  >
+   @include('breadcrumbs')
+<div>
   <br>
   <div class="main-content">
     <h2 style="font-weight: bold;">Mathematics: Lessons</h2 >
@@ -26,7 +25,7 @@
     <tbody >
       <tr>
         <td>Numbers</td>
-        <td><a href="{{url('/courses/files')}}" class="action-buttons"><i class="fa fa-eye"></i></a><a href="#"  class="action-buttons"><i class="fa fa-pencil-square-o"></i></a><a href="#"  class="action-buttons"><i class="fa fa-trash-o"></i></a></td>
+        <td><a href="{{url('/courses/sections/lessons/files')}}" class="action-buttons"><i class="fa fa-eye"></i></a><a href="#"  class="action-buttons"><i class="fa fa-pencil-square-o"></i></a><a href="#"  class="action-buttons"><i class="fa fa-trash-o"></i></a></td>
       </tr>
       <tr>
         <td>Advanced Numbers</td>

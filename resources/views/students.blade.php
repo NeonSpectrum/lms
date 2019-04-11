@@ -2,9 +2,8 @@
 
 @section("body")
 <div  class="main">
-  <h5>Main: Students</h5>
-  <div>
-  <hr  >
+   <div class="shadow" style="padding: 15px 0px 0.5px 15px;">
+  <h6> {{ Breadcrumbs::render('students') }}</h6></div>
   <br>
   <div class="main-content">
     <h2 style="font-weight: bold;">Students</h2 >
@@ -36,9 +35,9 @@
         </td>
       </tr>
       <tr id="section" class="section">
-        <td colspan="2" style="padding-left:30px">
-          <input type="checkbox" value="" > Mathematics<br>
-          <input type="checkbox" value="" > Saturn<br>
+        <td colspan="2" style="padding-left:50px">
+          <input type="checkbox" value="" > Mathematics<br><br>
+          <input type="checkbox" value="" > Saturn<br><br>
           <input type="checkbox" value="" > Uranus<br>
         </td>
       </tr>

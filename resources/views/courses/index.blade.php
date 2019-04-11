@@ -2,7 +2,7 @@
 
 @section("body")
 <div  class="main">
-  <div class="shadow" style="padding: 15px 0px 15px 0px;"><h5>Main: Courses</h5></div>
+   @include('breadcrumbs')
   <div>
   <br>
   <div class="main-content">

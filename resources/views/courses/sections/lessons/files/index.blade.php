@@ -2,9 +2,8 @@
 
 @section("body")
 <div  class="main">
-  <h5>Main: Courses / Mathematics / Lessons / Numbers</h5>
-  <div>
-  <hr  >
+    @include('breadcrumbs')
+<div>
   <br><br>
   <div class="main-content">
     <h2 style="font-weight: bold;">Mathematics: Numbers</h2 >

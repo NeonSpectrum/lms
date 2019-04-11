@@ -24,27 +24,51 @@ Route::post('login', 'AuthController@login');
 Route::prefix('courses')->group(function () {
 	Route::get('/', function () {
 		return view('courses.index');
-	});
+	})->name('courses');
 	Route::get('sections', function () {
-		return view('courses.sections');
-	});
-	Route::get('lessons', function () {
-		return view('courses.lessons');
-	});
-	Route::get('files', function () {
-		return view('courses.files');
-	});
+		return view('courses.sections.index');
+	})->name('sections');
+	Route::get('sections/lessons', function () {
+		return view('courses.sections.lessons.index');
+	})->name('lessons');
+	Route::get('sections/lessons/files', function () {
+		return view('courses.sections.lessons.files.index');
+	})->name('files');
 });
+
 // Route::get('courses', function () {
 // 	return view('courses');
 // });
 Route::get('students', function () {
 	return view('students');
-});
+})->name('students');
 Route::get('dashboard', function () {
 	return view('dashboard');
 });
 
 Route::middleware('auth')->group(function () {
 
+});
+/////////////Breadcrumbs/////////////////
+// Home
+Breadcrumbs::for ('students', function ($trail) {
+	$trail->push('Main: Students', route('students'));
+});
+
+Breadcrumbs::for ('courses', function ($trail) {
+	$trail->push('Main: Courses', route('courses'));
+});
+
+Breadcrumbs::for ('sections', function ($trail) {
+	$trail->parent('courses');
+	$trail->push('Section', route('sections'));
+});
+
+Breadcrumbs::for ('lessons', function ($trail) {
+	$trail->parent('sections');
+	$trail->push('Lessons', route('lessons'));
+});
+Breadcrumbs::for ('files', function ($trail) {
+	$trail->parent('lessons');
+	$trail->push('Files	', route('files'));
 });
